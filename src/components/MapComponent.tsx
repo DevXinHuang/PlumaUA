@@ -39,6 +39,16 @@ const getBirdIcon = (birdId: string) => {
     'verdin': '#ffd700',             // gold
     'phainopepla': '#4b0082',        // indigo
     'cactus-wren': '#daa520',        // goldenrod
+    'eurasian-collared-dove': '#a9a9a9', // dark gray
+    'inca-dove': '#cd853f',          // peru
+    'costas-hummingbird': '#9932cc', // dark orchid
+    'gilded-flicker': '#ff8c00',     // dark orange
+    'ladder-backed-woodpecker': '#8b4513', // saddle brown
+    'western-screech-owl': '#696969', // dim gray
+    'harriss-hawk': '#8b0000',       // dark red
+    'brown-headed-cowbird': '#654321', // dark brown
+    'lesser-goldfinch': '#ffd700',   // gold
+    'european-starling': '#000000',  // black
     
     // Summer breeders
     'white-winged-dove': '#deb887',  // burlywood
@@ -48,6 +58,11 @@ const getBirdIcon = (birdId: string) => {
     'black-chinned-hummingbird': '#9932cc', // dark orchid
     'broad-billed-hummingbird': '#00ced1', // dark turquoise
     'lucys-warbler': '#c0c0c0',      // silver
+    'bells-vireo': '#808080',        // gray
+    'summer-tanager': '#ff0000',     // red
+    'swainsons-hawk': '#8b4513',     // saddle brown
+    'lesser-nighthawk': '#696969',   // dim gray
+    'turkey-vulture': '#000000',     // black
     
     // Winter visitors
     'yellow-rumped-warbler': '#ffff00', // yellow
@@ -56,11 +71,21 @@ const getBirdIcon = (birdId: string) => {
     'ruby-crowned-kinglet': '#32cd32', // lime green
     'hermit-thrush': '#8b4513',      // saddle brown
     'red-naped-sapsucker': '#ff0000', // red
+    'sandhill-crane': '#808080',     // gray
+    'lincolns-sparrow': '#cd853f',   // peru
+    'cedar-waxwing': '#ffd700',      // gold
+    'merlin': '#4169e1',             // royal blue
+    'yellow-headed-blackbird': '#ffff00', // yellow
     
     // Migrants
     'wilsons-warbler': '#ffff00',    // yellow
     'western-tanager': '#ff4500',    // orange red
     'rufous-hummingbird': '#ff8c00', // dark orange
+    'lazuli-bunting': '#4169e1',     // royal blue
+    'macgillivrays-warbler': '#ffff00', // yellow
+    'olive-sided-flycatcher': '#8b4513', // saddle brown
+    'barn-swallow': '#4169e1',       // royal blue
+    'osprey': '#8b4513',             // saddle brown
   };
 
   const color = colors[birdId] || '#6b7280'; // default gray

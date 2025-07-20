@@ -151,19 +151,67 @@ export default function MapPage() {
                   <option value="gambels-quail">Gambel's Quail</option>
                   <option value="mourning-dove">Mourning Dove</option>
                   <option value="rock-pigeon">Rock Pigeon</option>
+                  <option value="eurasian-collared-dove">Eurasian Collared-Dove</option>
+                  <option value="inca-dove">Inca Dove</option>
                   <option value="annas-hummingbird">Anna's Hummingbird</option>
+                  <option value="costas-hummingbird">Costa's Hummingbird</option>
                   <option value="gila-woodpecker">Gila Woodpecker</option>
-                  <option value="cactus-wren">Cactus Wren</option>
+                  <option value="gilded-flicker">Gilded Flicker</option>
+                  <option value="ladder-backed-woodpecker">Ladder-backed Woodpecker</option>
+                  <option value="great-horned-owl">Great Horned Owl</option>
+                  <option value="western-screech-owl">Western Screech-Owl</option>
+                  <option value="coopers-hawk">Cooper's Hawk</option>
+                  <option value="harriss-hawk">Harris's Hawk</option>
+                  <option value="red-tailed-hawk">Red-tailed Hawk</option>
+                  <option value="american-kestrel">American Kestrel</option>
+                  <option value="great-tailed-grackle">Great-tailed Grackle</option>
+                  <option value="brown-headed-cowbird">Brown-headed Cowbird</option>
+                  <option value="house-finch">House Finch</option>
+                  <option value="lesser-goldfinch">Lesser Goldfinch</option>
                   <option value="house-sparrow">House Sparrow</option>
+                  <option value="european-starling">European Starling</option>
+                  <option value="northern-mockingbird">Northern Mockingbird</option>
+                  <option value="curve-billed-thrasher">Curve-billed Thrasher</option>
+                  <option value="verdin">Verdin</option>
+                  <option value="phainopepla">Phainopepla</option>
+                  <option value="cactus-wren">Cactus Wren</option>
                 </optgroup>
                 <optgroup label="Summer Breeders">
                   <option value="white-winged-dove">White-winged Dove</option>
                   <option value="hooded-oriole">Hooded Oriole</option>
+                  <option value="brown-crested-flycatcher">Brown-crested Flycatcher</option>
                   <option value="western-kingbird">Western Kingbird</option>
+                  <option value="black-chinned-hummingbird">Black-chinned Hummingbird</option>
+                  <option value="broad-billed-hummingbird">Broad-billed Hummingbird</option>
+                  <option value="lucys-warbler">Lucy's Warbler</option>
+                  <option value="bells-vireo">Bell's Vireo</option>
+                  <option value="summer-tanager">Summer Tanager</option>
+                  <option value="swainsons-hawk">Swainson's Hawk</option>
+                  <option value="lesser-nighthawk">Lesser Nighthawk</option>
+                  <option value="turkey-vulture">Turkey Vulture</option>
                 </optgroup>
                 <optgroup label="Winter Visitors">
                   <option value="yellow-rumped-warbler">Yellow-rumped Warbler</option>
                   <option value="white-crowned-sparrow">White-crowned Sparrow</option>
+                  <option value="dark-eyed-junco">Dark-eyed Junco</option>
+                  <option value="ruby-crowned-kinglet">Ruby-crowned Kinglet</option>
+                  <option value="hermit-thrush">Hermit Thrush</option>
+                  <option value="red-naped-sapsucker">Red-naped Sapsucker</option>
+                  <option value="sandhill-crane">Sandhill Crane</option>
+                  <option value="lincolns-sparrow">Lincoln's Sparrow</option>
+                  <option value="cedar-waxwing">Cedar Waxwing</option>
+                  <option value="merlin">Merlin</option>
+                  <option value="yellow-headed-blackbird">Yellow-headed Blackbird</option>
+                </optgroup>
+                <optgroup label="Migrants">
+                  <option value="wilsons-warbler">Wilson's Warbler</option>
+                  <option value="western-tanager">Western Tanager</option>
+                  <option value="rufous-hummingbird">Rufous Hummingbird</option>
+                  <option value="lazuli-bunting">Lazuli Bunting</option>
+                  <option value="macgillivrays-warbler">MacGillivray's Warbler</option>
+                  <option value="olive-sided-flycatcher">Olive-sided Flycatcher</option>
+                  <option value="barn-swallow">Barn Swallow</option>
+                  <option value="osprey">Osprey</option>
                 </optgroup>
               </select>
             </div>
