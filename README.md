@@ -81,7 +81,12 @@ A comprehensive bird watching platform for the University of Arizona community, 
 - **University Identity**: Official UA colors throughout all components
 - **Modern UI**: Clean, accessible design with hover effects
 - **Responsive**: Mobile-first approach with breakpoint optimization
-- **Dark Mode**: Complete dark theme support with system preference detection
+- **🌙 Dark Mode**: Complete dark theme support with system preference detection
+  - **Theme Toggle**: Light/Dark/System modes with smooth transitions
+  - **Theme Persistence**: Saves user preference using Zustand store
+  - **System Detection**: Automatically matches user's OS theme preference
+  - **Full Coverage**: All pages, components, and interactive elements
+  - **Consistent Styling**: Proper contrast and accessibility in both themes
 
 ### **Typography & Icons**
 - **Lucide React Icons**: Consistent iconography across all pages
@@ -102,7 +107,8 @@ A comprehensive bird watching platform for the University of Arizona community, 
 - **Leaflet.js**: Interactive mapping with custom markers and popups
 - **Lucide React**: Comprehensive icon system
 - **Dynamic Imports**: SSR-safe map loading to avoid hydration issues
-- **Zustand**: State management for theme persistence
+- **Zustand**: State management for theme persistence and user preferences
+- **Tailwind CSS**: Utility-first styling with dark mode support
 
 ### **Code Quality**
 - **ESLint**: Clean, consistent code with custom rules
@@ -177,12 +183,38 @@ A comprehensive bird watching platform for the University of Arizona community, 
 
 ---
 
+## 🌙 Dark Mode Implementation
+
+### **Features**
+- **Theme Toggle**: Three-mode system (Light/Dark/System) with smooth transitions
+- **Theme Persistence**: User preferences saved using Zustand store with localStorage
+- **System Detection**: Automatically detects and matches OS theme preference
+- **Full Coverage**: Complete dark mode styling across all pages and components
+- **Accessibility**: Proper contrast ratios and color schemes for both themes
+
+### **Technical Details**
+- **Zustand Store**: Centralized theme state management with persistence
+- **CSS Variables**: Dynamic color system using Tailwind's dark mode classes
+- **Smooth Transitions**: All elements transition smoothly between themes
+- **Responsive Design**: Dark mode works seamlessly on all device sizes
+
+### **Components Updated**
+- ✅ All page layouts and content sections
+- ✅ Navigation header and footer
+- ✅ Forms, buttons, and interactive elements
+- ✅ Map page with right sidebar
+- ✅ Blog posts and events
+- ✅ Bird cards and detail pages
+- ✅ Sightings form and list
+- ✅ About page with all sections
+
 ## 🎯 Immediate Next Steps
 
 1. **Test Current Features**: Explore all pages on `localhost:3000`
-2. **Gather User Feedback**: Share with potential users and stakeholders
-3. **Choose Development Priority**: Backend integration vs. new features
-4. **Plan Deployment Strategy**: Decide on hosting platform and domain
+2. **🌙 Test Dark Mode**: Try the theme toggle and verify all pages adapt properly
+3. **Gather User Feedback**: Share with potential users and stakeholders
+4. **Choose Development Priority**: Backend integration vs. new features
+5. **Plan Deployment Strategy**: Decide on hosting platform and domain
 
 ---
 
@@ -199,9 +231,12 @@ src/
 ├── components/         # Reusable React components
 │   ├── layout/         # Header, Footer, Navigation
 │   ├── BirdCard.tsx    # Bird display component
-│   └── MapComponent.tsx # Leaflet map integration
+│   ├── MapComponent.tsx # Leaflet map integration
+│   ├── ThemeProvider.tsx # Dark mode provider component
+│   └── ThemeToggle.tsx # Theme toggle button component
 ├── lib/               # Utility functions and Firebase config
-│   └── firebase.ts    # Firebase initialization
+│   ├── firebase.ts    # Firebase initialization
+│   └── theme.ts       # Zustand theme store and persistence
 └── types/             # TypeScript type definitions
     └── index.ts       # Bird, Sighting, BlogPost, Event interfaces
 ```
@@ -248,6 +283,7 @@ npm run dev
    - Navigate through all pages
    - Test the interactive map
    - Try the bird filters and search
+   - **🌙 Test Dark Mode**: Click the theme toggle in the header to switch between light, dark, and system themes
    - Submit a test sighting
 
 ---
