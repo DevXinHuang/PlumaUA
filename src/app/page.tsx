@@ -39,14 +39,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20">
+      <section className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <Bird className="h-16 w-16 text-green-600" />
+              <Bird className="h-16 w-16 text-[#AB0520]" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to <span className="text-green-600">PlumaUA</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-[#0C234B] mb-6">
+              Welcome to <span className="text-[#AB0520]">PlumaUA</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               <em>Volans ad Cognitionem</em> - Flying toward Knowledge
@@ -58,14 +58,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/birds" 
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
+                className="bg-[#AB0520] text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors flex items-center justify-center space-x-2"
               >
                 <Bird className="h-5 w-5" />
                 <span>Explore Birds</span>
               </Link>
               <Link 
                 href="/sightings" 
-                className="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors flex items-center justify-center space-x-2"
+                className="bg-white text-[#AB0520] border-2 border-[#AB0520] px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors flex items-center justify-center space-x-2"
               >
                 <Camera className="h-5 w-5" />
                 <span>Report Sighting</span>
@@ -83,10 +83,10 @@ export default function HomePage() {
             <p className="text-gray-600">Featured species spotted on campus</p>
           </div>
           
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 rounded-2xl p-8 border border-amber-200">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{birdOfTheWeek.name}</h3>
+                <h3 className="text-2xl font-bold text-[#0C234B] mb-2">{birdOfTheWeek.name}</h3>
                 <p className="text-gray-600 italic mb-4">{birdOfTheWeek.scientificName}</p>
                 <p className="text-gray-700 mb-4">{birdOfTheWeek.description}</p>
                 <p className="text-sm text-gray-600">
@@ -94,14 +94,14 @@ export default function HomePage() {
                 </p>
                 <Link 
                   href="/birds/american-robin" 
-                  className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold mt-4"
+                  className="inline-flex items-center space-x-2 text-[#AB0520] hover:text-red-800 font-semibold mt-4"
                 >
                   <span>Learn more</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <span className="text-gray-500">Bird Image Placeholder</span>
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg h-64 flex items-center justify-center border border-amber-200">
+                <span className="text-amber-700">Bird Image Placeholder</span>
               </div>
             </div>
           </div>
@@ -118,33 +118,33 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/birds" className="group">
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                <Bird className="h-12 w-12 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Bird Directory</h3>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <Bird className="h-12 w-12 text-[#AB0520] mb-4" />
+                <h3 className="text-xl font-semibold text-[#0C234B] mb-2">Bird Directory</h3>
                 <p className="text-gray-600 mb-4">Browse our comprehensive guide to campus birds</p>
-                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                <span className="text-[#AB0520] group-hover:text-red-800 font-semibold">
                   Explore Directory →
                 </span>
               </div>
             </Link>
             
             <Link href="/map" className="group">
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                <MapPin className="h-12 w-12 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Map</h3>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <MapPin className="h-12 w-12 text-[#AB0520] mb-4" />
+                <h3 className="text-xl font-semibold text-[#0C234B] mb-2">Interactive Map</h3>
                 <p className="text-gray-600 mb-4">See where birds have been spotted on campus</p>
-                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                <span className="text-[#AB0520] group-hover:text-red-800 font-semibold">
                   View Map →
                 </span>
               </div>
             </Link>
             
             <Link href="/sightings" className="group">
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                <Camera className="h-12 w-12 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Report Sighting</h3>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <Camera className="h-12 w-12 text-[#AB0520] mb-4" />
+                <h3 className="text-xl font-semibold text-[#0C234B] mb-2">Report Sighting</h3>
                 <p className="text-gray-600 mb-4">Share your bird observations with the community</p>
-                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                <span className="text-[#AB0520] group-hover:text-red-800 font-semibold">
                   Submit Sighting →
                 </span>
               </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
             </div>
             <Link 
               href="/blog" 
-              className="text-green-600 hover:text-green-700 font-semibold flex items-center space-x-2"
+              className="text-[#AB0520] hover:text-red-800 font-semibold flex items-center space-x-2"
             >
               <span>View all posts</span>
               <ArrowRight className="h-4 w-4" />
