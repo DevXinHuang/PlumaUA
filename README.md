@@ -81,6 +81,7 @@ A comprehensive bird watching platform for the University of Arizona community, 
 - **University Identity**: Official UA colors throughout all components
 - **Modern UI**: Clean, accessible design with hover effects
 - **Responsive**: Mobile-first approach with breakpoint optimization
+- **Dark Mode**: Complete dark theme support with system preference detection
 
 ### **Typography & Icons**
 - **Lucide React Icons**: Consistent iconography across all pages
@@ -101,6 +102,7 @@ A comprehensive bird watching platform for the University of Arizona community, 
 - **Leaflet.js**: Interactive mapping with custom markers and popups
 - **Lucide React**: Comprehensive icon system
 - **Dynamic Imports**: SSR-safe map loading to avoid hydration issues
+- **Zustand**: State management for theme persistence
 
 ### **Code Quality**
 - **ESLint**: Clean, consistent code with custom rules

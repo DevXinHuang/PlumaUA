@@ -119,9 +119,9 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-amber-200">
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-b border-amber-200 dark:border-amber-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Link 
             href="/birds" 
@@ -133,10 +133,10 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#0C234B] mb-2">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#0C234B] dark:text-white mb-2">
                 {bird.commonName}
               </h1>
-              <p className="text-lg text-gray-600 italic">{bird.scientificName}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400 italic">{bird.scientificName}</p>
             </div>
             
             <div className="mt-4 md:mt-0">
@@ -157,64 +157,64 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Image Gallery */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-[#0C234B] mb-4">Photos</h2>
-              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg h-64 flex items-center justify-center border border-amber-200">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h2 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-4">Photos</h2>
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 rounded-lg h-64 flex items-center justify-center border border-amber-200 dark:border-amber-800/30">
                 <div className="text-center">
                   <Camera className="h-16 w-16 text-[#AB0520] mx-auto mb-4" />
-                  <p className="text-amber-700">Photo Gallery Coming Soon</p>
-                  <p className="text-sm text-amber-600 mt-2">Submit photos through sightings</p>
+                  <p className="text-amber-700 dark:text-amber-300">Photo Gallery Coming Soon</p>
+                  <p className="text-sm text-amber-600 dark:text-amber-400 mt-2">Submit photos through sightings</p>
                 </div>
               </div>
             </div>
 
             {/* Description */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-[#0C234B] mb-4">Description</h2>
-              <p className="text-gray-700 leading-relaxed">{bird.description}</p>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h2 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-4">Description</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{bird.description}</p>
             </div>
 
             {/* Behavior */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-[#0C234B] mb-4">Behavior</h2>
-              <p className="text-gray-700 leading-relaxed">{bird.behavior}</p>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h2 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-4">Behavior</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{bird.behavior}</p>
             </div>
 
             {/* Vocalizations */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-[#0C234B] mb-4">Vocalizations</h2>
-              <p className="text-gray-700 leading-relaxed">{bird.vocalizations}</p>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h2 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-4">Vocalizations</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{bird.vocalizations}</p>
             </div>
 
             {/* Habitat */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-[#0C234B] mb-4">Habitat</h2>
-              <p className="text-gray-700 leading-relaxed">{bird.habitat}</p>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h2 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-4">Habitat</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{bird.habitat}</p>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Quick Info */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-[#0C234B] mb-4">Quick Facts</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h3 className="text-lg font-semibold text-[#0C234B] dark:text-white mb-4">Quick Facts</h3>
               
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 mb-1">Size</h4>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Size</h4>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300">
                     {bird.size.charAt(0).toUpperCase() + bird.size.slice(1)}
                   </span>
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 mb-2">Colors</h4>
+                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Colors</h4>
                   <div className="flex flex-wrap gap-2">
                     {bird.colors.map((color) => (
-                      <span 
-                        key={color}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800"
-                      >
+                                              <span 
+                          key={color}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300"
+                        >
                         {color.charAt(0).toUpperCase() + color.slice(1)}
                       </span>
                     ))}
@@ -222,12 +222,12 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 mb-2">Seasons</h4>
+                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Seasons</h4>
                   <div className="flex flex-wrap gap-2">
                     {bird.seasons.map((season) => (
                       <span 
                         key={season}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
+                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300"
                       >
                         {season.charAt(0).toUpperCase() + season.slice(1)}
                       </span>
@@ -238,23 +238,23 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
             </div>
 
             {/* Campus Range */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-[#0C234B] mb-4 flex items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h3 className="text-lg font-semibold text-[#0C234B] dark:text-white mb-4 flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-[#AB0520]" />
                 Campus Range
               </h3>
-              <p className="text-gray-700">{bird.campusRange}</p>
+              <p className="text-gray-700 dark:text-gray-300">{bird.campusRange}</p>
             </div>
 
             {/* Recent Sightings */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-[#0C234B] mb-4 flex items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h3 className="text-lg font-semibold text-[#0C234B] dark:text-white mb-4 flex items-center">
                 <Calendar className="h-5 w-5 mr-2 text-[#AB0520]" />
                 Recent Sightings
               </h3>
               <div className="text-center py-8">
-                <Users className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-4">No recent sightings</p>
+                <Users className="h-12 w-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+                <p className="text-gray-600 dark:text-gray-400 mb-4">No recent sightings</p>
                 <Link 
                   href={`/sightings?bird=${bird.id}`}
                   className="text-[#AB0520] hover:text-red-800 font-semibold"
@@ -265,8 +265,8 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
             </div>
 
             {/* Related Birds */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-[#0C234B] mb-4">Similar Birds</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+              <h3 className="text-lg font-semibold text-[#0C234B] dark:text-white mb-4">Similar Birds</h3>
               <div className="space-y-3">
                 {mockBirds
                   .filter(b => b.id !== bird.id && b.size === bird.size)
@@ -275,10 +275,10 @@ export default async function BirdProfilePage({ params }: BirdProfilePageProps) 
                     <Link 
                       key={relatedBird.id}
                       href={`/birds/${relatedBird.id}`}
-                      className="block p-3 rounded-lg border border-gray-100 hover:border-[#AB0520] hover:bg-red-50 transition-colors"
+                      className="block p-3 rounded-lg border border-gray-100 dark:border-gray-600 hover:border-[#AB0520] hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
                     >
-                      <h4 className="font-semibold text-[#0C234B]">{relatedBird.commonName}</h4>
-                      <p className="text-sm text-gray-600 italic">{relatedBird.scientificName}</p>
+                      <h4 className="font-semibold text-[#0C234B] dark:text-white">{relatedBird.commonName}</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 italic">{relatedBird.scientificName}</p>
                     </Link>
                   ))}
               </div>

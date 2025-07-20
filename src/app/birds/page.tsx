@@ -1086,13 +1086,13 @@ export default function BirdsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-amber-200">
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-b border-amber-200 dark:border-amber-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-[#0C234B] mb-4">Bird Directory</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-[#0C234B] dark:text-white mb-4">Bird Directory</h1>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Discover the diverse bird species that call the University of Arizona campus home. 
               From common urban birds to desert specialists, explore our feathered neighbors.
             </p>
@@ -1102,18 +1102,18 @@ export default function BirdsPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search and Filters */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-8 transition-colors">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 h-5 w-5" />
                 <input
                   type="text"
                   placeholder="Search birds by name..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#AB0520] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#AB0520] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
             </div>
@@ -1125,7 +1125,7 @@ export default function BirdsPage() {
                 className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'grid' 
                     ? 'bg-[#AB0520] text-white' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 <Grid className="h-5 w-5" />
@@ -1135,7 +1135,7 @@ export default function BirdsPage() {
                 className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'list' 
                     ? 'bg-[#AB0520] text-white' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 <List className="h-5 w-5" />
@@ -1147,7 +1147,7 @@ export default function BirdsPage() {
           <div className="mt-6 space-y-4">
             {/* Size Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Size</h3>
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Size</h3>
               <div className="flex flex-wrap gap-2">
                 {['all', 'small', 'medium', 'large'].map((size) => (
                   <button
@@ -1156,7 +1156,7 @@ export default function BirdsPage() {
                     className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                       selectedSize === size
                         ? 'bg-[#AB0520] text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
                     {size === 'all' ? 'All Sizes' : size.charAt(0).toUpperCase() + size.slice(1)}
@@ -1167,7 +1167,7 @@ export default function BirdsPage() {
 
             {/* Color Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Colors</h3>
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Colors</h3>
               <div className="flex flex-wrap gap-2">
                 {allColors.map((color) => (
                   <button
@@ -1176,7 +1176,7 @@ export default function BirdsPage() {
                     className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                       selectedColors.includes(color)
                         ? 'bg-[#AB0520] text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
                     {color.charAt(0).toUpperCase() + color.slice(1)}
@@ -1187,7 +1187,7 @@ export default function BirdsPage() {
 
             {/* Season Filter */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Seasons</h3>
+              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Seasons</h3>
               <div className="flex flex-wrap gap-2">
                 {allSeasons.map((season) => (
                   <button
@@ -1196,7 +1196,7 @@ export default function BirdsPage() {
                     className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                       selectedSeasons.includes(season)
                         ? 'bg-[#AB0520] text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
                     {season.charAt(0).toUpperCase() + season.slice(1)}
@@ -1209,7 +1209,7 @@ export default function BirdsPage() {
 
         {/* Results */}
         <div className="mb-6">
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-400">
             Showing {filteredBirds.length} of {mockBirds.length} birds
           </p>
         </div>
@@ -1224,15 +1224,15 @@ export default function BirdsPage() {
         ) : (
           <div className="space-y-4">
             {filteredBirds.map((bird) => (
-              <div key={bird.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <div key={bird.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-4 flex-shrink-0">
+                  <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-lg p-4 flex-shrink-0">
                     <BirdIcon className="h-12 w-12 text-[#AB0520]" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-[#0C234B] mb-1">{bird.commonName}</h3>
-                    <p className="text-gray-600 italic mb-2">{bird.scientificName}</p>
-                    <p className="text-gray-700 mb-3">{bird.description}</p>
+                    <h3 className="text-xl font-semibold text-[#0C234B] dark:text-white mb-1">{bird.commonName}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 italic mb-2">{bird.scientificName}</p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-3">{bird.description}</p>
                     <div className="flex flex-wrap gap-2">
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
                         {bird.size}

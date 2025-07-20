@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -6,33 +8,42 @@
   --ua-red: #AB0520;
   --ua-navy: #0C234B;
   --desert-sand: #C5B358;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* Dark mode variables */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #1a1a1a;
+  --card-border: #2a2a2a;
+  --muted: #9ca3af;
+  --muted-foreground: #6b7280;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Desert theme background pattern */
+/* Desert theme background pattern - adapted for dark mode */
 .desert-pattern {
   background-image: 
     radial-gradient(circle at 25% 25%, rgba(197, 179, 88, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(171, 5, 32, 0.05) 0%, transparent 50%);
+}
+
+.dark .desert-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(197, 179, 88, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(171, 5, 32, 0.02) 0%, transparent 50%);
 }
 
 /* Custom scrollbar for desert theme */
@@ -41,14 +52,44 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fefefe;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C5B358;
+  background: var(--desert-sand);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #AB0520;
+  background: var(--ua-red);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Smooth transitions for theme switching */
+body,
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-800,
+.bg-gray-900,
+.border-gray-200,
+.border-gray-300,
+.border-gray-600,
+.border-gray-700,
+.text-gray-600,
+.text-gray-700,
+.text-gray-900 {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
