@@ -1,103 +1,192 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Bird, MapPin, Camera, BookOpen, ArrowRight } from 'lucide-react';
 
-export default function Home() {
+export default function HomePage() {
+  // Mock data for Bird of the Week
+  const birdOfTheWeek = {
+    name: "American Robin",
+    scientificName: "Turdus migratorius",
+    image: "/api/placeholder/400/300",
+    description: "A familiar sight on campus lawns, the American Robin is known for its distinctive orange breast and cheerful song. These birds are often seen hopping across grassy areas in search of worms and insects.",
+    habitat: "Open woodlands, gardens, and lawns"
+  };
+
+  // Mock data for latest blog posts
+  const latestPosts = [
+    {
+      id: '1',
+      title: "Spring Migration: What to Look For",
+      excerpt: "As spring approaches, keep an eye out for returning migratory birds...",
+      date: "2024-03-15",
+      author: "Xin"
+    },
+    {
+      id: '2',
+      title: "Bird Photography Tips for Beginners",
+      excerpt: "Learn how to capture stunning photos of campus birds with these simple techniques...",
+      date: "2024-03-10",
+      author: "Xin"
+    },
+    {
+      id: '3',
+      title: "The Hidden Lives of Campus Sparrows",
+      excerpt: "Discover the fascinating social behaviors of our most common campus residents...",
+      date: "2024-03-05",
+      author: "Xin"
+    }
+  ];
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Bird className="h-16 w-16 text-green-600" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to <span className="text-green-600">PlumaUA</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <em>Volans ad Cognitionem</em> - Flying toward Knowledge
+            </p>
+            <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+              Explore and document the diverse bird life on campus. Connect with nature 
+              through citizen science and discover the hidden avian world around you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/birds" 
+                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
+              >
+                <Bird className="h-5 w-5" />
+                <span>Explore Birds</span>
+              </Link>
+              <Link 
+                href="/sightings" 
+                className="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors flex items-center justify-center space-x-2"
+              >
+                <Camera className="h-5 w-5" />
+                <span>Report Sighting</span>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Bird of the Week */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Bird of the Week</h2>
+            <p className="text-gray-600">Featured species spotted on campus</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{birdOfTheWeek.name}</h3>
+                <p className="text-gray-600 italic mb-4">{birdOfTheWeek.scientificName}</p>
+                <p className="text-gray-700 mb-4">{birdOfTheWeek.description}</p>
+                <p className="text-sm text-gray-600">
+                  <strong>Habitat:</strong> {birdOfTheWeek.habitat}
+                </p>
+                <Link 
+                  href="/birds/american-robin" 
+                  className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold mt-4"
+                >
+                  <span>Learn more</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+                <span className="text-gray-500">Bird Image Placeholder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Actions */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Started</h2>
+            <p className="text-gray-600">Choose your adventure</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Link href="/birds" className="group">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <Bird className="h-12 w-12 text-green-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Bird Directory</h3>
+                <p className="text-gray-600 mb-4">Browse our comprehensive guide to campus birds</p>
+                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                  Explore Directory →
+                </span>
+              </div>
+            </Link>
+            
+            <Link href="/map" className="group">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <MapPin className="h-12 w-12 text-green-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Map</h3>
+                <p className="text-gray-600 mb-4">See where birds have been spotted on campus</p>
+                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                  View Map →
+                </span>
+              </div>
+            </Link>
+            
+            <Link href="/sightings" className="group">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <Camera className="h-12 w-12 text-green-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Report Sighting</h3>
+                <p className="text-gray-600 mb-4">Share your bird observations with the community</p>
+                <span className="text-green-600 group-hover:text-green-700 font-semibold">
+                  Submit Sighting →
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest from the Blog</h2>
+              <p className="text-gray-600">Stories, tips, and insights from the PlumaUA community</p>
+            </div>
+            <Link 
+              href="/blog" 
+              className="text-green-600 hover:text-green-700 font-semibold flex items-center space-x-2"
+            >
+              <span>View all posts</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {latestPosts.map((post) => (
+              <article key={post.id} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="bg-gray-200 rounded-lg h-48 mb-4 flex items-center justify-center">
+                  <span className="text-gray-500">Blog Image</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <div className="flex justify-between items-center text-sm text-gray-500">
+                  <span>By {post.author}</span>
+                  <span>{new Date(post.date).toLocaleDateString()}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
