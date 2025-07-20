@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Bird, MapPin, Camera, BookOpen, ArrowRight } from 'lucide-react';
+import { Bird as BirdIcon, MapPin, Camera, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   // Mock data for Bird of the Week
@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <Bird className="h-16 w-16 text-[#AB0520]" />
+              <BirdIcon className="h-16 w-16 text-[#AB0520]" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-[#0C234B] mb-6">
               Welcome to <span className="text-[#AB0520]">PlumaUA</span>
@@ -60,7 +60,7 @@ export default function HomePage() {
                 href="/birds" 
                 className="bg-[#AB0520] text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors flex items-center justify-center space-x-2"
               >
-                <Bird className="h-5 w-5" />
+                <BirdIcon className="h-5 w-5" />
                 <span>Explore Birds</span>
               </Link>
               <Link 
@@ -119,7 +119,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/birds" className="group">
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <Bird className="h-12 w-12 text-[#AB0520] mb-4" />
+                <BirdIcon className="h-12 w-12 text-[#AB0520] mb-4" />
                 <h3 className="text-xl font-semibold text-[#0C234B] mb-2">Bird Directory</h3>
                 <p className="text-gray-600 mb-4">Browse our comprehensive guide to campus birds</p>
                 <span className="text-[#AB0520] group-hover:text-red-800 font-semibold">

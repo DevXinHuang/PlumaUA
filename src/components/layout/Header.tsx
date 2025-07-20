@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Bird, MapPin, Camera, BookOpen, Users } from 'lucide-react';
+import { Bird as BirdIcon, MapPin, Camera, BookOpen, Users } from 'lucide-react';
 
 const Header = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', label: 'Home', icon: Bird },
-    { href: '/birds', label: 'Birds', icon: Bird },
+    { href: '/', label: 'Home', icon: BirdIcon },
+    { href: '/birds', label: 'Birds', icon: BirdIcon },
     { href: '/sightings', label: 'Sightings', icon: Camera },
     { href: '/map', label: 'Map', icon: MapPin },
     { href: '/blog', label: 'Blog', icon: BookOpen },
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Bird className="h-8 w-8 text-[#AB0520]" />
+              <BirdIcon className="h-8 w-8 text-[#AB0520]" />
               <span className="text-xl font-bold text-[#0C234B]">PlumaUA</span>
             </Link>
           </div>

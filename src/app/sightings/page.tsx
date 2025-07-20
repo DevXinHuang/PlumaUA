@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Camera, MapPin, Calendar, User, Search, Filter } from 'lucide-react';
+import { Camera, MapPin, User, Search } from 'lucide-react';
 import { Sighting } from '@/types';
 
 // Mock data for sightings

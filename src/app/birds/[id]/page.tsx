@@ -1,5 +1,3 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, MapPin, Calendar, Users, Camera } from 'lucide-react';
@@ -106,13 +104,14 @@ const mockBirds: Bird[] = [
 ];
 
 interface BirdProfilePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function BirdProfilePage({ params }: BirdProfilePageProps) {
-  const bird = mockBirds.find(b => b.id === params.id);
+export default async function BirdProfilePage({ params }: BirdProfilePageProps) {
+  const { id } = await params;
+  const bird = mockBirds.find(b => b.id === id);
 
   if (!bird) {
     notFound();

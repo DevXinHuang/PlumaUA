@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Bird, Mail, Twitter, Instagram } from 'lucide-react';
+import { Bird as BirdIcon, Mail, Twitter, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Bird className="h-8 w-8 text-[#C5B358]" />
+              <BirdIcon className="h-8 w-8 text-[#C5B358]" />
               <span className="text-xl font-bold">PlumaUA</span>
             </div>
             <p className="text-gray-300 mb-4">

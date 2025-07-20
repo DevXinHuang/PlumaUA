@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Filter, Grid, List } from 'lucide-react';
+import { Search, Grid, List, Bird as BirdIcon } from 'lucide-react';
 import BirdCard from '@/components/BirdCard';
 import { Bird } from '@/types';
 
@@ -290,7 +290,7 @@ export default function BirdsPage() {
               <div key={bird.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-start space-x-4">
                   <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-4 flex-shrink-0">
-                    <Bird className="h-12 w-12 text-[#AB0520]" />
+                    <BirdIcon className="h-12 w-12 text-[#AB0520]" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-[#0C234B] mb-1">{bird.commonName}</h3>
@@ -318,7 +318,7 @@ export default function BirdsPage() {
 
         {filteredBirds.length === 0 && (
           <div className="text-center py-12">
-            <Bird className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+            <BirdIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">No birds found</h3>
             <p className="text-gray-600">Try adjusting your search terms or filters.</p>
           </div>

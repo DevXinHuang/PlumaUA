@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Bird } from 'lucide-react';
+import { Bird as BirdIcon } from 'lucide-react';
 import { Bird as BirdType } from '@/types';
 
 interface BirdCardProps {
@@ -14,7 +14,7 @@ const BirdCard = ({ bird }: BirdCardProps) => {
       <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden border border-gray-100">
         {/* Image placeholder */}
         <div className="aspect-square bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center">
-          <Bird className="h-16 w-16 text-[#AB0520] group-hover:text-red-800 transition-colors" />
+          <BirdIcon className="h-16 w-16 text-[#AB0520] group-hover:text-red-800 transition-colors" />
         </div>
         
         {/* Content */}
