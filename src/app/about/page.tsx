@@ -67,7 +67,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-[#0C234B] mb-6">Meet Xin</h2>
               <div className="prose prose-lg text-gray-700 space-y-4">
                 <p>
-                  Hi! I'm Xin, a passionate bird enthusiast and student at the University of Arizona. 
+                  Hi! I&apos;m Xin, a passionate bird enthusiast and student at the University of Arizona. 
                   My journey into bird watching began during my first year on campus when I noticed 
                   the incredible diversity of birds that share our beautiful desert campus.
                 </p>
@@ -75,13 +75,13 @@ export default function AboutPage() {
                   What started as casual observations quickly grew into a deep fascination with 
                   avian behavior, migration patterns, and the unique adaptations of desert birds. 
                   I realized that many students and faculty members were also interested in the 
-                  birds around us, but there wasn't a centralized way to share our observations 
+                  birds around us, but there wasn&apos;t a centralized way to share our observations 
                   and learn from each other.
                 </p>
                 <p>
-                  That's why I created PlumaUA - to connect our campus community with the amazing 
-                  bird life that surrounds us every day. Whether you're a seasoned birder or just 
-                  curious about the feathered friends in your backyard, there's a place for you here.
+                  That&apos;s why I created PlumaUA - to connect our campus community with the amazing 
+                  bird life that surrounds us every day. Whether you&apos;re a seasoned birder or just 
+                  curious about the feathered friends in your backyard, there&apos;s a place for you here.
                 </p>
               </div>
             </div>

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { MapPin, Filter, Search } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { Sighting } from '@/types';
 
 // Dynamically import the map component to avoid SSR issues

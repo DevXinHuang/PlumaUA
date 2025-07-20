@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import { Sighting } from '@/types';
 
 // Fix for default markers in Leaflet
-delete (L.Icon.Default.prototype as any)._getIconUrl;
+delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: string })._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
@@ -110,7 +110,7 @@ const MapComponent = ({ sightings, onSightingClick }: MapComponentProps) => {
 
     // Fit map to show all markers if there are any
     if (sightings.length > 0) {
-      const group = new L.featureGroup(markersRef.current);
+      const group = L.featureGroup(markersRef.current);
       map.fitBounds(group.getBounds().pad(0.1));
     }
 
@@ -118,7 +118,7 @@ const MapComponent = ({ sightings, onSightingClick }: MapComponentProps) => {
 
   // Add global function for popup button clicks
   useEffect(() => {
-    (window as any).sightingClick = (sightingId: string) => {
+    (window as unknown as { sightingClick?: (sightingId: string) => void }).sightingClick = (sightingId: string) => {
       const sighting = sightings.find(s => s.id === sightingId);
       if (sighting) {
         onSightingClick(sighting);
@@ -126,7 +126,7 @@ const MapComponent = ({ sightings, onSightingClick }: MapComponentProps) => {
     };
 
     return () => {
-      delete (window as any).sightingClick;
+      delete (window as unknown as { sightingClick?: (sightingId: string) => void }).sightingClick;
     };
   }, [sightings, onSightingClick]);
 
