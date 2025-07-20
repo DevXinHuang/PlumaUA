@@ -21,12 +21,46 @@ interface MapComponentProps {
 // Custom icon colors for different bird types
 const getBirdIcon = (birdId: string) => {
   const colors: { [key: string]: string } = {
-    'american-robin': '#ef4444', // red
-    'cactus-wren': '#3b82f6',    // blue
-    'northern-cardinal': '#10b981', // green
-    'house-sparrow': '#eab308',  // yellow
-    'mourning-dove': '#8b5cf6',  // purple
-    'gila-woodpecker': '#f97316', // orange
+    // Year-round residents
+    'gambels-quail': '#8b4513',      // saddle brown
+    'mourning-dove': '#a0522d',      // sienna
+    'rock-pigeon': '#708090',        // slate gray
+    'annas-hummingbird': '#ff69b4',  // hot pink
+    'gila-woodpecker': '#ff4500',    // orange red
+    'great-horned-owl': '#2f4f4f',   // dark slate gray
+    'coopers-hawk': '#8b0000',       // dark red
+    'red-tailed-hawk': '#dc143c',    // crimson
+    'american-kestrel': '#4169e1',   // royal blue
+    'great-tailed-grackle': '#000000', // black
+    'house-finch': '#ff0000',        // red
+    'house-sparrow': '#d2691e',      // chocolate
+    'northern-mockingbird': '#696969', // dim gray
+    'curve-billed-thrasher': '#cd853f', // peru
+    'verdin': '#ffd700',             // gold
+    'phainopepla': '#4b0082',        // indigo
+    'cactus-wren': '#daa520',        // goldenrod
+    
+    // Summer breeders
+    'white-winged-dove': '#deb887',  // burlywood
+    'hooded-oriole': '#ffa500',      // orange
+    'brown-crested-flycatcher': '#8b4513', // saddle brown
+    'western-kingbird': '#ffff00',   // yellow
+    'black-chinned-hummingbird': '#9932cc', // dark orchid
+    'broad-billed-hummingbird': '#00ced1', // dark turquoise
+    'lucys-warbler': '#c0c0c0',      // silver
+    
+    // Winter visitors
+    'yellow-rumped-warbler': '#ffff00', // yellow
+    'white-crowned-sparrow': '#f5f5dc', // beige
+    'dark-eyed-junco': '#708090',    // slate gray
+    'ruby-crowned-kinglet': '#32cd32', // lime green
+    'hermit-thrush': '#8b4513',      // saddle brown
+    'red-naped-sapsucker': '#ff0000', // red
+    
+    // Migrants
+    'wilsons-warbler': '#ffff00',    // yellow
+    'western-tanager': '#ff4500',    // orange red
+    'rufous-hummingbird': '#ff8c00', // dark orange
   };
 
   const color = colors[birdId] || '#6b7280'; // default gray

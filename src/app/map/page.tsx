@@ -22,8 +22,8 @@ const MapComponent = dynamic(() => import('@/components/MapComponent'), {
 const mockSightings: Sighting[] = [
   {
     id: '1',
-    birdId: 'american-robin',
-    birdName: 'American Robin',
+    birdId: 'gambels-quail',
+    birdName: 'Gambel\'s Quail',
     date: new Date('2024-03-15'),
     location: {
       lat: 32.2319,
@@ -31,7 +31,7 @@ const mockSightings: Sighting[] = [
       name: 'Old Main Lawn'
     },
     photo: undefined,
-    notes: 'Saw a pair of robins hopping around the lawn, likely looking for worms after the recent rain.',
+    notes: 'Saw a covey of quail foraging on the ground near the desert garden. Males with distinctive black faces.',
     userId: 'user1',
     userName: 'Xin',
     isApproved: true,
@@ -56,8 +56,8 @@ const mockSightings: Sighting[] = [
   },
   {
     id: '3',
-    birdId: 'northern-cardinal',
-    birdName: 'Northern Cardinal',
+    birdId: 'annas-hummingbird',
+    birdName: 'Anna\'s Hummingbird',
     date: new Date('2024-03-13'),
     location: {
       lat: 32.2330,
@@ -65,7 +65,7 @@ const mockSightings: Sighting[] = [
       name: 'Student Union Garden'
     },
     photo: undefined,
-    notes: 'Bright red male cardinal singing from the top of a mesquite tree. Beautiful song!',
+    notes: 'Bright pink-throated male hummingbird feeding at the flower beds. Performed a spectacular dive display!',
     userId: 'user3',
     userName: 'Mike',
     isApproved: true,
@@ -147,12 +147,24 @@ export default function MapPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#AB0520] focus:border-transparent"
               >
                 <option value="all">All Birds</option>
-                <option value="american-robin">American Robin</option>
-                <option value="house-sparrow">House Sparrow</option>
-                <option value="mourning-dove">Mourning Dove</option>
-                <option value="northern-cardinal">Northern Cardinal</option>
-                <option value="cactus-wren">Cactus Wren</option>
-                <option value="gila-woodpecker">Gila Woodpecker</option>
+                <optgroup label="Year-Round Residents">
+                  <option value="gambels-quail">Gambel's Quail</option>
+                  <option value="mourning-dove">Mourning Dove</option>
+                  <option value="rock-pigeon">Rock Pigeon</option>
+                  <option value="annas-hummingbird">Anna's Hummingbird</option>
+                  <option value="gila-woodpecker">Gila Woodpecker</option>
+                  <option value="cactus-wren">Cactus Wren</option>
+                  <option value="house-sparrow">House Sparrow</option>
+                </optgroup>
+                <optgroup label="Summer Breeders">
+                  <option value="white-winged-dove">White-winged Dove</option>
+                  <option value="hooded-oriole">Hooded Oriole</option>
+                  <option value="western-kingbird">Western Kingbird</option>
+                </optgroup>
+                <optgroup label="Winter Visitors">
+                  <option value="yellow-rumped-warbler">Yellow-rumped Warbler</option>
+                  <option value="white-crowned-sparrow">White-crowned Sparrow</option>
+                </optgroup>
               </select>
             </div>
 
