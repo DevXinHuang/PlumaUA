@@ -213,6 +213,14 @@ export default function MapPage() {
                   <option value="barn-swallow">Barn Swallow</option>
                   <option value="osprey">Osprey</option>
                 </optgroup>
+                <optgroup label="Rare/Exotic Species">
+                  <option value="streak-backed-oriole">Streak-backed Oriole</option>
+                  <option value="rufous-backed-robin">Rufous-backed Robin</option>
+                  <option value="rosy-faced-lovebird">Rosy-faced Lovebird</option>
+                  <option value="black-vented-oriole">Black-vented Oriole</option>
+                  <option value="aztec-thrush">Aztec Thrush</option>
+                  <option value="rufous-capped-warbler">Rufous-capped Warbler</option>
+                </optgroup>
               </select>
             </div>
 

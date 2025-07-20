@@ -86,6 +86,14 @@ const getBirdIcon = (birdId: string) => {
     'olive-sided-flycatcher': '#8b4513', // saddle brown
     'barn-swallow': '#4169e1',       // royal blue
     'osprey': '#8b4513',             // saddle brown
+    
+    // Rare/Exotic Species
+    'streak-backed-oriole': '#ff4500', // orange red
+    'rufous-backed-robin': '#8b4513',  // saddle brown
+    'rosy-faced-lovebird': '#32cd32',  // lime green
+    'black-vented-oriole': '#000000',  // black
+    'aztec-thrush': '#ffffff',         // white
+    'rufous-capped-warbler': '#ffd700', // gold
   };
 
   const color = colors[birdId] || '#6b7280'; // default gray
