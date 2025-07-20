@@ -314,7 +314,7 @@ This project is open source and available under the MIT License.
 
 ## 📞 Contact
 
-- **Email**: contact@plumaua.org
+- **Email**: danielxinhuang@arizona.edu
 - **GitHub**: [@DevXinHuang/PlumaUA](https://github.com/DevXinHuang/PlumaUA)
 - **Location**: University of Arizona, Tucson, AZ
 
