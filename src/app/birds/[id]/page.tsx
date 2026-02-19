@@ -110,6 +110,14 @@ interface BirdProfilePageProps {
   }>;
 }
 
+export function generateStaticParams() {
+  return mockBirds.map((bird) => ({
+    id: bird.id,
+  }));
+}
+
+export const dynamicParams = false;
+
 export default async function BirdProfilePage({ params }: BirdProfilePageProps) {
   const { id } = await params;
   const bird = mockBirds.find(b => b.id === id);
